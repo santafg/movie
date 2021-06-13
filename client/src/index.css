@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: 0;
+          box-sizing: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.loader {
+  border: 2rem solid transparent;
+  border-top: 2rem solid #84b825;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.homeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff2e8;
+  height: 100vh;
+}
+
+.homeContainer .homeBox {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homeContainer .homeBox .head {
+  height: 100vh;
+  width: 15vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #5E5E5E;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.homeContainer .homeBox .head h1 {
+  font-size: 4rem;
+  margin-top: 2rem;
+  color: white;
+  border-bottom: .2rem solid white;
+}
+
+.homeContainer .homeBox .head .btn {
+  width: 100%;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homeContainer .homeBox .head .btn h2 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.homeContainer .homeBox .head .btn button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: .5rem;
+  margin-top: .3rem;
+  font-size: 2rem;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  color: #603311;
+  background-color: white;
+  border: 0.1rem solid #603311;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.homeContainer .homeBox .head .btn button:hover {
+  background-color: #603311;
+  color: white;
+}
+
+.homeContainer .homeBox .body {
+  width: 85vw;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.homeContainer .homeBox .body .load {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homeContainer .homeBox .body .cardsDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.homeContainer .homeBox .body .cardsDiv .card {
+  width: 25%;
+  margin-left: 5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: #c5ff59;
+  -webkit-box-shadow: 0 0.3rem 1rem 0.3rem #84b825;
+          box-shadow: 0 0.3rem 1rem 0.3rem #84b825;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 2rem;
+  cursor: pointer;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+
+.homeContainer .homeBox .body .cardsDiv .card:hover {
+  -webkit-box-shadow: 0 0.5rem 1.4rem 0.6rem #84b825;
+          box-shadow: 0 0.5rem 1.4rem 0.6rem #84b825;
+}
+
+.homeContainer .homeBox .body .cardsDiv .card .info {
+  margin-bottom: 1rem;
+}
+
+.homeContainer .homeBox .body .cardsDiv .card .info h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.homeContainer .homeBox .body .cardsDiv .card .info h3 {
+  font-size: 1.5rem;
+}
+
+.homeContainer .homeBox .body .cardsDiv .card .info h5 {
+  font-size: 1.2rem;
+}
+
+.homeContainer .homeBox .body .cardsDiv .card .info .money {
+  margin-top: 0.5rem;
+}
+
+.homeContainer .homeBox .body .cardsDiv .card .btns {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.homeContainer .homeBox .body .cardsDiv .card .btns button {
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  border-radius: .3rem;
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.homeContainer .homeBox .body .cardsDiv .card .btns .update {
+  background-color: #414f12;
+  border: .1rem solid #414f12;
+}
+
+.homeContainer .homeBox .body .cardsDiv .card .btns .update:hover {
+  color: #414f12;
+  background-color: white;
+}
+
+.homeContainer .homeBox .body .cardsDiv .card .btns .delete {
+  background-color: red;
+  border: .1rem solid red;
+}
+
+.homeContainer .homeBox .body .cardsDiv .card .btns .delete:hover {
+  color: red;
+  background-color: white;
+}
+
+.addContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+}
+
+.addContainer .addBox {
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 0.5rem;
+  background-color: #c5ff59;
+  -webkit-box-shadow: 0 0.3rem 1rem 0.3rem #84b825;
+          box-shadow: 0 0.3rem 1rem 0.3rem #84b825;
+}
+
+.addContainer .addBox .head {
+  margin-top: 3rem;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 0.2rem solid black;
+}
+
+.addContainer .addBox .head h1 {
+  font-size: 4rem;
+}
+
+.addContainer .addBox .body {
+  width: 70%;
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.addContainer .addBox .body .formDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.addContainer .addBox .body .formDiv label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5rem 0;
+}
+
+.addContainer .addBox .body .formDiv label h2 {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+
+.addContainer .addBox .body .formDiv label input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  border-bottom: 0.1rem solid black;
+  font-size: 2rem;
+  padding: 0.1rem;
+}
+
+.addContainer .addBox .body .formDiv label #date {
+  border: none;
+  outline: none;
+}
+
+.addContainer .addBox .body .btn {
+  width: 100%;
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0.5rem;
+}
+
+.addContainer .addBox .body .btn button {
+  font-size: 2rem;
+  margin-left: 1rem;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+  border-radius: .3rem;
+}
+
+.addContainer .addBox .body .btn .submit {
+  background-color: #eca20e;
+  border: .1rem solid #eca20e;
+}
+
+.addContainer .addBox .body .btn .submit:hover {
+  color: #eca20e;
+  background-color: white;
+}
+
+.addContainer .addBox .body .btn .home {
+  background-color: #385E0F;
+  border: .1rem solid #385E0F;
+}
+
+.addContainer .addBox .body .btn .home:hover {
+  color: #385E0F;
+  background-color: white;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+// mixin
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin bor {
+  border: 0.1rem solid black;
+}
+
+@mixin btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+// Loader 
+.loader {
+  border: 2rem solid transparent; 
+  border-top: 2rem solid #84b825; 
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Home
+
+.homeContainer {
+  @include flex();
+  background-color: #fff2e8;
+  height: 100vh;
+  .homeBox {
+    width: 100vw;
+    @include flex();
+    .head {
+      height: 100vh;
+      width: 15vw;
+      @include flex();
+      background: #5E5E5E;
+      flex-direction: column;
+      justify-content: flex-start;
+      h1 {
+        font-size: 4rem;
+        margin-top: 2rem;
+        color: white;
+        border-bottom: .2rem solid white;
+      }
+      .btn{
+        width: 100%;
+        margin-top: 2rem;
+        @include flex();
+        h2{
+          font-size: 2.5rem;
+          color: white
+        }
+        button {
+          @include btn();
+          margin-left: .5rem;
+          margin-top: .3rem;
+          font-size: 2rem;
+          padding: 0.25rem 1rem;
+          border-radius: 0.5rem;
+          color: #603311;
+          background-color: white;
+          border: 0.1rem solid #603311;
+          transition: 0.2s ease;
+          &:hover {
+            background-color: #603311;
+            color: white;
+          }
+        }
+      }
+    }
+    .body {
+      width: 85vw;
+    //   height: 56rem;
+      overflow-y: auto;
+      height: 100vh;
+      // @include bor();
+      .load{
+        width: 100%;
+        height: 100%;
+        @include flex();
+      }
+      .cardsDiv {
+        @include flex();
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        // @include bor();
+        .card {
+          width: 25%;
+          // margin: 2rem 2rem;
+          margin-left: 5rem;
+          margin-top: 2.5rem;
+          margin-bottom: 2.5rem;
+          padding: 1rem 2rem;
+          // @include bor();
+          // border: .1rem solid #385E0F;
+          border-radius: 0.5rem;
+          background-color: #c5ff59;
+          box-shadow: 0 0.3rem 1rem 0.3rem #84b825;
+          @include flex();
+          flex-direction: column;
+          align-items: flex-start;
+          font-size: 2rem;
+          cursor: pointer;
+          transition: 0.15s ease-in-out;
+          &:hover {
+            box-shadow: 0 0.5rem 1.4rem 0.6rem #84b825;
+          }
+          .info {
+            margin-bottom: 1rem;
+            h1 {
+              margin-bottom: 1rem;
+              font-size: 2.5rem;
+            }
+            h3 {
+              font-size: 1.5rem;
+            }
+            h5 {
+              font-size: 1.2rem;
+            }
+            .money {
+              margin-top: 0.5rem;
+            }
+          }
+          .btns {
+            width: 100%;
+            @include flex();
+            justify-content: flex-end;
+            // @include bor();
+            button {
+              padding: 0.5rem;
+              margin-left: 0.5rem;
+              @include btn();
+              color: white;
+              border-radius: .3rem;
+              transition: .25s ease-in-out;
+            }
+            .update {
+              background-color: #414f12;
+              border: .1rem solid #414f12;
+              &:hover{
+                color: #414f12;
+                background-color: white;
+              }
+            }
+            .delete {
+              background-color: red;
+              border: .1rem solid red;
+              &:hover{
+                color: red;
+                background-color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Add page
+
+.addContainer {
+  @include flex();
+  height: 80vh;
+  .addBox {
+    width: 50vw;
+    @include flex();
+    flex-direction: column;
+    // @include bor();
+    border-radius: 0.5rem;
+    background-color: #c5ff59;
+    box-shadow: 0 0.3rem 1rem 0.3rem #84b825;
+
+    .head {
+      margin-top: 3rem;
+      width: 60%;
+      @include flex();
+      border-bottom: 0.2rem solid black;
+      h1 {
+        font-size: 4rem;
+      }
+    }
+    .body {
+      width: 70%;
+      // @include bor();
+      margin: 2rem 0;
+      @include flex();
+      flex-direction: column;
+      .formDiv {
+        @include flex();
+        flex-direction: column;
+        align-items: flex-start;
+        label {
+          @include flex();
+          margin: 0.5rem 0;
+          h2 {
+            font-size: 2.5rem;
+            margin-right: 1rem;
+          }
+          input {
+            border: none;
+            background-color: transparent;
+            outline: none;
+            border-bottom: 0.1rem solid black;
+            font-size: 2rem;
+            padding: 0.1rem;
+          }
+          #date {
+            border: none;
+            outline: none;
+          }
+        }
+      }
+      .btn {
+        // @include bor();
+        width: 100%;
+        margin: 1rem 0;
+        @include flex();
+        justify-content: flex-end;
+        padding: 0.5rem;
+        button {
+          font-size: 2rem;
+          margin-left: 1rem;
+          padding: 0.25rem 0.5rem;
+          @include btn();
+          color: white;
+          transition: .25s ease-in-out;
+          border-radius: .3rem;
+        }
+        .submit{
+            background-color: #eca20e;
+            border: .1rem solid #eca20e;
+            &:hover{
+              color: #eca20e;
+              background-color: white;
+            }
+          }
+          .home{
+            background-color: #385E0F;
+            border: .1rem solid #385E0F;
+            &:hover{
+              color: #385E0F;
+              background-color: white;
+            }
+        }
+      }
+    }
+  }
+}
